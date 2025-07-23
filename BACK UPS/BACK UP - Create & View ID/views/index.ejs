@@ -1,0 +1,58 @@
+Nominal Roll App
+    <!-- <script src="script.js"></script> -->
+     <!-- "action" states which view the click will go to, "method" states the method used in index.js -->
+    <form action="/" method="POST">
+      <!-- <input placeholder="Enter new info here..."> -->
+      <%- include('_form_fields') %>
+      <button type="submit">Add to Nom Roll</button>
+    </form>
+
+    <% people.forEach(person => { %>
+      <br>
+      <div><%= person.name %></div>
+      <button onclick="window.location='/<%= person.id %>';">VIEW ID Number</button>
+      <button onclick="window.location='/<%= person.id %>/edit';">Edit Name</button>
+      <button>DELETE</button>
+      <br>
+    <% }) %>
+
+    <!-- <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div>
+    <div class="row">
+      <div class="name_container">EMPTY</div>
+      <button class="edit_function">EDIT</button>
+      <button class="delete_function">DELETE</button>
+    </div> -->

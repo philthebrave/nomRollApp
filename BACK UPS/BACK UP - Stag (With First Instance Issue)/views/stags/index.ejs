@@ -1,0 +1,94 @@
+<% if (staglists.length === 0) { %>
+    <div>0000 - 0600 (Person 1) Name: GAPPED</div>
+    <div>0000 - 0600 (Person 2) Name: GAPPED</div>
+    <div>0600 - 1200 (Person 1) Name: GAPPED</div>
+    <div>0600 - 1200 (Person 2) Name: GAPPED</div>
+    <div>1200 - 1800 (Person 1) Name: GAPPED</div>
+    <div>1200 - 1800 (Person 2) Name: GAPPED</div>
+    <div>1800 - 0000 (Person 1) Name: GAPPED</div>
+    <div>1800 - 0000 (Person 2) Name: GAPPED</div>
+<% } else { %>  
+    <% staglists.forEach(staglist => { %>
+        <div>0000 - 0600 (Person 1) Name: <%= staglist.person1 %></div>
+        <div>0000 - 0600 (Person 2) Name: <%= staglist.person2 %></div>
+        <div>0600 - 1200 (Person 1) Name: <%= staglist.person3 %></div>
+        <div>0600 - 1200 (Person 2) Name: <%= staglist.person4 %></div>
+        <div>1200 - 1800 (Person 1) Name: <%= staglist.person5 %></div>
+        <div>1200 - 1800 (Person 2) Name: <%= staglist.person6 %></div>
+        <div>1800 - 0000 (Person 1) Name: <%= staglist.person7 %></div>
+        <div>1800 - 0000 (Person 2) Name: <%= staglist.person8 %></div>
+    <% }) %>
+<% } %>
+<br>
+
+
+<!-- ----------------------------------------------- -->
+
+<form action="/stags" method="POST">
+<div>
+    <label>
+        0000 - 0600 (Person 1) Name: </label>
+    <select name="person1">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>0000 - 0600 (Person 2) Name: </label>
+    <select name="person2">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>0600 - 1200 (Person 1) Name: </label>
+    <select name="person3">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>0600 - 1200 (Person 2) Name: </label>
+    <select name="person4">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>1200 - 1800 (Person 1) Name: </label>
+    <select name="person5">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>1200 - 1800 (Person 2) Name: </label>
+    <select name="person6">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>1800 - 0000 (Person 1) Name: </label>
+    <select name="person7">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<div>
+    <label>1800 - 0000 (Person 2) Name: </label>
+    <select name="person8">
+        <% people.forEach(person => { %>
+            <option label="<%= person.name %>" value="<%= person.name %>"></option>    
+        <% }) %>        
+    </select>
+</div>
+<button type="submit">Create Stag List</button>
+</form>

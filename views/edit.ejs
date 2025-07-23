@@ -1,0 +1,10 @@
+<h2>Edit Name</h2>
+<h2>Currently: <%= person.name %></h2>
+<h2>Change to:</h2>
+<form action="/<%= person.id %>?_method=PUT" method="POST">
+    <%- include('_form_fields') %>
+    <button type="submit">Update</button>
+</form>
+<form action="/">
+    <button type="submit">Cancel</button>
+</form>

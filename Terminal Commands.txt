@@ -1,0 +1,17 @@
+// Initialise project.
+npm init -y
+
+// Install dependencies (express for server, ejs for templating language, and layouts to facilitate layouts file).
+npm express ejs express-ejs-layouts
+
+// LOCALLY install nodemon to enable automatic refreshing of server when changes are made.
+npm i --save-dev nodemon
+
+// Install Mongood to enable connection to MongoDB.
+npm i mongoose
+
+// LOCALLY install dotenv to enable env variables to be loaded into app.
+npm i --save-dev dotenv
+
+// Run project LOCALLY in localhost.
+npm run devStart

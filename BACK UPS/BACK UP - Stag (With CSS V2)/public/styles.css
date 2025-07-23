@@ -1,0 +1,22 @@
+body {
+    background-color: #B5BF79;
+    font-family: Arial;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name_container {
+    border-color: black;
+    border: solid;
+    width: 25%;
+}
+  
+  .edit_function,
+  .delete_function {
+    width: 5%;
+}
