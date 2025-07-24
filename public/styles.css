@@ -43,4 +43,13 @@ select:valid {
         justify-content: center;
         flex-direction: column;
     }
+    .edit_function {
+        display: table;
+        margin: 0 auto
+    }
+    .delete_function {
+        display: table;
+        margin: 0 auto
+    }
+
 }
